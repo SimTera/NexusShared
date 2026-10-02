@@ -209,7 +209,7 @@
  Permission: roles.manage
  Body: CreateRoleRequest {
    name: String,
-   permissions: Set<Permission>
+   permissions: Permissions
  }
  Response: 201 RoleDTO
  Errors:
@@ -229,7 +229,7 @@
  Permission: roles.manage
  Body: UpdateRoleRequest {
    name: String?,
-   permissions: Set<Permission>?
+   permissions: Permissions?
  }
  Response: 200 RoleDTO
  Errors:

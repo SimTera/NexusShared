@@ -18,15 +18,15 @@ let package = Package(
         .target(
             name: "NexusShared",
             swiftSettings: [
-                .enableUpcomingFeature("ApproachableConcurrency"),
-            ],
+                .enableUpcomingFeature("StrictConcurrency"),
+            ]
         ),
         .testTarget(
             name: "NexusSharedTests",
             dependencies: ["NexusShared"],
             swiftSettings: [
-                .enableUpcomingFeature("ApproachableConcurrency"),
-            ],
+                .enableUpcomingFeature("StrictConcurrency"),
+            ]
         ),
     ]
 )
