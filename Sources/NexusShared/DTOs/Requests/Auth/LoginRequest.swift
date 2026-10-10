@@ -28,6 +28,7 @@ extension LoginRequest {
     public func validate() throws {
         var errors: [String] = []
         
+        // para probar error comentar esto
         if email.trimmingCharacters(in: .whitespaces).isEmpty {
             errors.append("Email is required")
         }
