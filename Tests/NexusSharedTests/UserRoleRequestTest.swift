@@ -85,8 +85,6 @@ struct UserRoleRequestsTests {
     @Test("UpdateUser: No lanza error si todos los campos son nil")
     func updateUserOpcionalesValidos() throws {
         let vacio = UpdateUserRequest()
-        #expect(throws: Never.self) {
-            try vacio.validate()
-        }
+        try vacio.validate()
     }
 }

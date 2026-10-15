@@ -42,7 +42,6 @@ struct AuthDTOTest {
         
         #expect(received.email == origin.email)
         #expect(received.password == origin.password)
-        #expect(received.email != "otromail@nexus.com") //para comprobar si sale algo diferente que funciona
     }
     
     // MARK: - 2. Comprobacion de RefreshRequest
@@ -75,9 +74,7 @@ struct AuthDTOTest {
             newPassword: "PasswordNueva456!"
         )
         
-        #expect(throws: Never.self) {
-            try request.validate()
-        }
+        try request.validate()
     }
 }
 
